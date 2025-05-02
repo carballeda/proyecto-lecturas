@@ -1,0 +1,70 @@
+{% extends 'libros/base.html' %}
+
+{% block content %}
+    <div class="libro-detalle">
+        {% if libro.portada %}
+            <img src="{{ libro.portada.url }}" alt="Portada de {{ libro.titulo }}" style="max-width: 300px; margin-bottom: 20px;">
+        {% endif %}
+
+        <h1>{{ libro.titulo }}</h1>
+
+        {% if libro.autor %}
+            <p class="autor">{{ libro.autor }}</p>
+        {% endif %}
+
+        {% if libro.calificacion %}
+            <div class="campo">
+                <span class="rating">
+                    {% for i in "12345" %}
+                        {% if forloop.counter <= libro.calificacion %}
+                            <label>⭐️</label>
+                        {% else %}
+                            <label>☆</label>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            </div>
+        {% endif %}
+
+        {% if libro.año_publicacion %}
+            <div class="campo">
+                <strong>Año de publicación:</strong>
+                <p>{{ libro.año_publicacion }}</p>
+            </div>
+        {% endif %}
+
+        {% if libro.formato %}
+            <div class="campo">
+                <strong>Formato: </strong> 
+                <p>{{ libro.get_formato_display }}</p>
+            </div>
+        {% endif %}
+
+        {% if libro.notas %}
+            <div class="campo">
+                <strong>Notas: </strong> 
+                <p>{{ libro.notas }}</p>
+            </div>
+        {% endif %}   
+
+        {% if libro.citas %}
+            <div class="campo">
+                <strong>Citas: </strong> 
+                <p>{{ libro.citas|linebreaksbr }}</p>
+            </div>
+        {% endif %}   
+
+        {% if libro.etiquetas.all.count %}
+            <div class="campo">
+                <strong>Etiquetas:</strong>
+                <ul>
+                    {% for etiqueta in libro.etiquetas.all %}
+                        <li>{{ etiqueta.nombre }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'lista_libros' %}" class="volver">← Volver al listado</a>
+    </div>
+{% endblock %}

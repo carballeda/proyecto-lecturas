@@ -1,0 +1,60 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de bases de datos locales
+db.sqlite3
+
+# Configuración local
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.swp
+*.swo
+
+# Archivos de entorno
+.env
+.env.*
+
+# Archivos de configuración de editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Migraciones innecesarias
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+
+# Archivos de Static/Media generados en local
+staticfiles/
+media/
+
+# Archivos de testing o debugging
+coverage/
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Otros posibles backups
+*.bak
+*.tmp
+*.orig

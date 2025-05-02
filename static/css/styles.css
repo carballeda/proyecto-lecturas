@@ -1,0 +1,177 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contenedor para listas y detalle */
+.lista-libros,
+.libro-detalle {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la lista de libros */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li:hover {
+    background: #f9f9f9;
+}
+
+/* Información del libro en lista */
+.info-libro {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+.info-libro small {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #A876C2;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las estrellas de calificación en lista */
+.rating {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rating label {
+    font-size: 23px;
+    color: gold;
+}
+
+/* Mensaje vacío */
+.empty-message {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+}
+
+/* Estilos para el formulario de búsqueda */
+.buscador {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buscador input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+}
+
+.buscador button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid #A876C2;
+    background-color: #A876C2;
+    color: white;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: #9d4cc8;
+}
+
+/* Botón de volver */
+.volver {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #A876C2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.volver:hover {
+    background-color: #A876C2;
+}
+
+/* Estilos para libro_detalle específicos */
+.libro-detalle {
+    text-align: center;
+}
+
+.libro-detalle .autor {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Estrellas centradas */
+.libro-detalle .rating {
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Campos con estilo limpio */
+.libro-detalle .campo {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.libro-detalle .campo strong {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.libro-detalle .campo p,
+.libro-detalle .campo span,
+.libro-detalle .campo ul {
+    margin: 0;
+    color: #555;
+}
