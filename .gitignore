@@ -12,6 +12,9 @@ __pycache__/
 # Archivos de bases de datos locales
 db.sqlite3
 
+# Archivo con datos de lecturas
+libros.csv
+
 # Configuración local
 *.log
 *.pot
