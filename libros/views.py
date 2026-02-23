@@ -17,3 +17,10 @@ def lista_libros(request):
         )
 
     return render(request, 'libros/lista_libros.html', {'libros': libros, 'query': query})
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+@api_view(['GET'])
+def api_test(request):
+    return Response({"status": "ok", "message": "La API funciona"})
