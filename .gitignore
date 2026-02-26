@@ -61,3 +61,6 @@ coverage.xml
 *.bak
 *.tmp
 *.orig
+
+#script para la exportación de la BBDD  
+export_libros_utf8.py
