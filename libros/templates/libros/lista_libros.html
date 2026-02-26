@@ -18,31 +18,25 @@
             <a href="{% url 'libro_detalle' libro.id %}">
               <strong>{{ libro.titulo }}</strong>
             </a>
-            <span class="autor">{{ libro.autor }}</span>
+            {% if libro.autor %}
+              <span class="autor">{{ libro.autor }}</span>
+            {% endif %}
           </div>
-          <div class="rating">
-            {% for i in "12345" %}
-              {% with i|slice:":1" as num %}
-                {% if num == "1" and libro.calificacion|default:0 >= 1 %}
-                  <label>⭐️</label>
-                  <!-- <label>★</label> -->
-                {% elif num == "2" and libro.calificacion >= 2 %}
-                  <label>⭐️</label>
-                {% elif num == "3" and libro.calificacion >= 3 %}
-                  <label>⭐️</label>
-                {% elif num == "4" and libro.calificacion >= 4 %}
-                  <label>⭐️</label>
-                {% elif num == "5" and libro.calificacion >= 5 %}
+
+          {% if libro.calificacion %}
+            <div class="rating">
+              {% for i in "12345" %}
+                {% if forloop.counter <= libro.calificacion %}
                   <label>⭐️</label>
                 {% else %}
-                  <label>✩</label>
+                  <label>☆</label>
                 {% endif %}
-              {% endwith %}
-            {% endfor %}
-          </div>
+              {% endfor %}
+            </div>
+          {% endif %}
         </li>
       {% empty %}
-        <li>Nada que mostrar por aquí.</li>
+        <li class="empty-message">Nada que mostrar por aquí.</li>
       {% endfor %}
     </ul>
   </div>
