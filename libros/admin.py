@@ -8,7 +8,7 @@ class LibroAdmin(admin.ModelAdmin):
     list_filter = ['estado', 'calificacion', 'genero', 'fecha_fin', 'formato']  # Filtros en el panel de administración
     ordering = ['-fecha_fin']  # Ordenar por fecha de fin, más reciente primero
     search_fields = ['titulo', 'autor']  # Permite buscar por título o autor
-
+    exclude = ['portada']  # xcluimos el campo que da problemas en Render
 
 admin.site.register(Libro, LibroAdmin)
 admin.site.register(Etiqueta)
