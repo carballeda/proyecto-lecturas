@@ -8,6 +8,7 @@ Este proyecto es una aplicación web desarrollada con Django para gestionar una 
 Todos los campos son opcionales excepto título y autor.
 - Interfaz de administración con filtros y búsqueda.
 - Carga inicial de datos desde un archivo CSV exportado de otra aplicación de gestión de lecturas.
+- Carga de datos de ejemplo (`libros_fixture.json`) con libros y etiquetas ficticias, pensada para quien clona el proyecto y quiere probarlo rápidamente sin tener que introducir libros a mano.
 - Página pública (opcional) con listado de libros.
 
 ## Requisitos
@@ -20,26 +21,43 @@ Todos los campos son opcionales excepto título y autor.
 
 1. Clona el repositorio o descarga los archivos.
 2. Crea y activa un entorno virtual:
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate  # En macOS/Linux: source venv/bin/activate
-    ```
+
+```
+python -m venv venv
+venv\Scripts\activate  # En macOS/Linux: source venv/bin/activate
+```
+
 3. Instala las dependencias:
-    ```bash
-    pip install -r requirements.txt
-    ```
+
+```
+pip install -r requirements.txt
+```
+
 4. Aplica las migraciones:
-    ```bash
-    python manage.py migrate
-    ```
+
+```
+python manage.py migrate
+```
+
 5. Crea un superusuario para acceder al admin:
-    ```bash
-    python manage.py createsuperuser
-    ```
-6. Ejecuta el servidor:
-    ```bash
-    python manage.py runserver
-    ```
+
+```
+python manage.py createsuperuser
+```
+
+6. (Opcional) Carga los datos de ejemplo para empezar a probar la aplicación con contenido ya creado:
+
+```
+python load_fixture.py
+```
+
+Esto añade a la base de datos los libros y etiquetas ficticias incluidas en `libros_fixture.json`. Puedes editarlos, borrarlos o sustituirlos por tus propias lecturas en cualquier momento desde el panel de administración.
+
+7. Ejecuta el servidor:
+
+```
+python manage.py runserver
+```
 
 ## Uso
 
@@ -50,6 +68,8 @@ Accede a `http://127.0.0.1:8000/admin/` para gestionar tu base de datos de lectu
 - `libros/`: Contiene el modelo `Libro` y la configuración de la app.
 - `templates/`: Plantillas HTML para la vista pública opcional.
 - `management/commands/importar_lecturas.py`: Script para importar libros desde un archivo CSV.
+- `libros_fixture.json`: Datos de ejemplo (ficticios) para cargar con `load_fixture.py`.
+- `load_fixture.py`: Script para cargar `libros_fixture.json` en la base de datos.
 
 ## Licencia
 
