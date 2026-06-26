@@ -1,0 +1,105 @@
+[
+{
+"model": "libros.etiqueta",
+"pk": 1,
+"fields": {
+"nombre": "etiqueta de ejemplo 1"
+}
+},
+{
+"model": "libros.etiqueta",
+"pk": 2,
+"fields": {
+"nombre": "etiqueta de ejemplo 2"
+}
+},
+{
+"model": "libros.libro",
+"pk": 1,
+"fields": {
+"portada": "",
+"titulo": "Título de ejemplo 1",
+"autor": "Autor de ejemplo 1",
+"isbn": "9780000000001",
+"paginas": 312,
+"año_publicacion": 2021,
+"formato": "ebook",
+"fecha_inicio": "2025-01-02",
+"fecha_fin": "2025-01-10",
+"calificacion": 5,
+"notas": "Aquí irían tus notas sobre la lectura.",
+"citas": "Aquí iría una cita del libro.",
+"genero": "Género de ejemplo",
+"estado": "leido",
+"etiquetas": [
+1,
+2
+]
+}
+},
+{
+"model": "libros.libro",
+"pk": 2,
+"fields": {
+"portada": "",
+"titulo": "Título de ejemplo 2",
+"autor": "Autor de ejemplo 2",
+"isbn": "9780000000002",
+"paginas": 248,
+"año_publicacion": 2023,
+"formato": "blanda",
+"fecha_inicio": "2025-02-01",
+"fecha_fin": "2025-02-12",
+"calificacion": 4,
+"notas": "",
+"citas": "",
+"genero": "Género de ejemplo",
+"estado": "leido",
+"etiquetas": [
+2
+]
+}
+},
+{
+"model": "libros.libro",
+"pk": 3,
+"fields": {
+"portada": "",
+"titulo": "Título de ejemplo 3",
+"autor": "Autor de ejemplo 3",
+"isbn": null,
+"paginas": null,
+"año_publicacion": null,
+"formato": "audiolibro",
+"fecha_inicio": null,
+"fecha_fin": null,
+"calificacion": null,
+"notas": "Ejemplo de libro abandonado, sin fechas ni calificación.",
+"citas": "",
+"genero": "Género de ejemplo",
+"estado": "abandonado",
+"etiquetas": []
+}
+},
+{
+"model": "libros.libro",
+"pk": 4,
+"fields": {
+"portada": "",
+"titulo": "Título de ejemplo 4",
+"autor": "Autor de ejemplo 4",
+"isbn": null,
+"paginas": 190,
+"año_publicacion": 2019,
+"formato": "dura",
+"fecha_inicio": null,
+"fecha_fin": null,
+"calificacion": null,
+"notas": "Ejemplo de libro pendiente de leer.",
+"citas": "",
+"genero": "Género de ejemplo",
+"estado": "quiero_leer",
+"etiquetas": []
+}
+}
+]
